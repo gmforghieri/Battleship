@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="/stylesheets/splash.css">
+</head>
+<body>
+<div id="container">
+    <section id="mainbox">
+        <div id = "img">
+            <img id="logo" src="images/piratebay logo blue.png">
+        </div>
+        <h1 id="title">BATTLESHIP ROYALE</h1>
+
+        <form action="/game" method="get" id="playform">
+            <button type="submit" class="fancybutton" id="playbutton">PLAY</button>
+        </form>
+
+        <button class="fancybutton" onclick="instructions()">INSTRUCTIONS</button>
+        
+    </section>
+</div>
+<div id = "instructions">After pressing the play button you will be placed in a queue, once another player enters the queue,
+you will be directed to the game screen. First place your boats on the board, to do this left click on them,
+then as you hover on the board a visual represantation will appear, left click again to place the boat. If you wish to rotate the boat vertically,
+right click and the visual represantation will turn vertical indicating that the boat will also be placed vertically.
+Once you have placed all your boats press the ready button on the navigation bar. If you click the ready button without placing your boats, your boats will be randomly placed on the board.
+As soon as your opponent has also clicked the ready button the game will begin.<span id = "closebutton" onclick="closebutton()">✕</span></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="javascripts/index.js"></script>
+<section id="statistics">
+    <h3>Statistics</h3>
+    How often you played this game: <%= played %><br>
+    Players playing: <%= stats.online %><br>
+    Games played: <%= stats.games %><br>
+    Total ships sunk: <%= stats.ships %><br>
+</section>
+<div id="screen-too-small">
+    Sadly, your screen is too small to play this game.
+</div>
+</body>
+</html>

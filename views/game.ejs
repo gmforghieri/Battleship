@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+    <title>BattleShip Royale</title>
+    <link rel="stylesheet" href="stylesheets/game.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="screen-queue">
+    <h2>BATTLESHIP ROYALE</h2>
+    <p>You are in queue</p>
+    <div id= "img"><img id="logo" src="images/piratebay logo green.png"></div>
+    
+</div>
+<div id="screen-game" style= "display: none">
+    <div id="container">
+        <div id="header">
+            <div class="header-part">
+                <div class="headerthing" id="title">Battleship Royale</div>
+                <div class="headerthing show-game" id="turn">Your turn</div>
+                <div class="headerthing show-setup" id="ready" onclick="onReadyClick()"> Click to ready</div>
+            </div>
+            <div class="header-part">
+                <div class="headerthing" id="fullscreen" onclick="toggleFullScreen()">Fullscreen </div>
+                <div class="headerthing" id="quit" onclick="QuitClick()">Quit </div>
+            </div>
+        </div>
+        <div id="header-transition">
+            <div class="header-subtransition" id="header-subtransition1"></div>
+            <div class="header-subtransition" id="header-subtransition2"></div>
+            <div class="header-subtransition" id="header-subtransition3"></div>
+        </div>
+        <div id="boards">
+            <div id="column-left">
+                <div class="area" id="your-area">
+                    <h2 class="area-header">Your board</h2>
+                    <table id="yourtable" class="board">
+                        <tr>
+                            <th></th>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>C</th>
+                            <th>D</th>
+                            <th>E</th>
+                            <th>F</th>
+                            <th>G</th>
+                            <th>H</th>
+                            <th>I</th>
+                            <th>J</th>
+                        </tr>
+                        <%for(let row = 0; row < 10; row++){%>
+                            <tr>
+                                <th><%= row + 1 %></th>
+                                <%for(let col = 0; col < 10; col++){%>
+                                    <td></td>
+                                <%}%>
+                            </tr>
+                        <%}%>
+                    </table>
+                </div>
+            </div>
+            <div class="show-setup" id="column-middle">
+                <div class="area show-setup" id="setup-area">
+                    <h2 class="area-header">Setup</h2>
+                    <span id="setup"></span>
+                </div>
+            </div>
+            <div id="column-right">
+                <div class="area show-game" id="opponents-area">
+                    <h2 class="area-header">Opponent's board</h2>
+                    <table id="enemytable" class="board">
+                        <tr>
+                            <th></th>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>C</th>
+                            <th>D</th>
+                            <th>E</th>
+                            <th>F</th>
+                            <th>G</th>
+                            <th>H</th>
+                            <th>I</th>
+                            <th>J</th>
+                        </tr>
+                        <%for(let row = 0; row < 10; row++){%>
+                            <tr>
+                                <th><%= row + 1 %></th>
+                                <%for(let col = 0; col < 10; col++){%>
+                                    <td></td>
+                                <%}%>
+                            </tr>
+                        <%}%>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="screen-too-small">
+    Sadly, your screen is too small to play this game.
+</div>
+<script src="javascripts/packets_clientside.js"></script>
+<script src="javascripts/boats.js"></script>
+<script src="javascripts/client-side.js"></script>
+</body>
+</html>

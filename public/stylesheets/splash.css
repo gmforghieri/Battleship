@@ -1,0 +1,108 @@
+body {
+    background-color: #00a2e8;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mainbox {
+    display: flex;
+    flex-direction: column;
+}
+
+#title {
+    text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+#img {
+    margin-top: 50px;
+}
+
+.fancybutton {
+    /* Position */
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    /* Look */
+    background-color: #c8fdff;
+    border: #a7dbdd 3px solid;
+    border-radius: 7px;
+    padding: 7px;
+    font-size: 18px;
+    transition: 300ms linear;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.fancybutton:hover {
+    background-color: #a7dbdd;
+    border: darkcyan 3px solid;
+    box-sizing: border-box;
+}
+
+#playbutton {
+    width: 100%;
+}
+#instructions {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(17, 212, 10);
+    border: 5px solid black;
+    display:none;
+    padding:25px;
+    box-shadow: 5px 10px 8px #004968;
+}
+#closebutton {
+    position: absolute;
+    top:0;
+    right:0;
+    font-size:25px;
+    font-weight:bold;
+    margin-right:5px;
+    cursor:pointer;
+}
+#statistics {
+    /* Put the box at the bottom center */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    /* Look */
+    background-color: #c8fdff;
+    border: #a7dbdd 3px solid;
+    border-bottom: none;
+    border-left: none;
+    border-radius: 0 7px 0 0;
+    padding: 10px 50px;
+    box-sizing: border-box;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+/* Make stats full size on mobile */
+@media only screen and (max-width: 600px) {
+    #statistics {
+        width: 100vw;
+        border-radius: 0;
+        border-right: none;
+    }
+}
+
+/* === SCREEN TOO SMALL */
+#screen-too-small {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #00a2e8;
+}
+
+@media only screen and (min-width: 1366px) {
+    #screen-too-small {
+        display: none;
+    }
+}

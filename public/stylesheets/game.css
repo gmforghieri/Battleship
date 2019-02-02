@@ -1,0 +1,261 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* ==== QUEUE SCREEN ==== */
+
+#screen-queue {
+    /*Style */
+    background-color:	#22B14C;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color: black;
+
+    /*Position */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+}
+#screen-queue h2,p, img {
+    margin-top: 50px;
+}
+#screen-queue h2 {
+    font-size: 80px;
+}
+#screen-queue p {
+    font-size: 40px;
+}
+
+/*Setup phase styling */
+#setup {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+#setup .boat {
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+
+/* === HEADER === */
+body {
+    background-color: #00a2e8;
+    
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: rgb(17, 212, 10);
+}
+
+.header-part {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.headerthing {
+    margin-left: 5px;
+    margin-right: 5px;
+    background: rgb(133, 255, 133);
+    box-sizing: border-box;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+#title {
+    font-size: 25px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+}
+
+/* === HEADER BUTTONS === */
+
+#quit, #fullscreen, #ready {
+    cursor: pointer;
+}
+#quit:active {
+    background-color: red;
+}
+#quit::after {
+    content: "✕";
+}
+#ready:active, #fullscreen:active {
+    background-color:rgb(7, 255, 7);
+}
+#ready::before {
+    content: "✕ ";
+}
+#ready.changed::before {
+    content: "✓ ";
+}
+
+#setup {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+#setup .boat {
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+
+#setup .boat.selected {
+    border: #00a2e8 2px solid;
+    border-radius: 4px;
+}
+
+/* === HEADER TRANSITION === */
+
+#header-transition {
+    position: relative;
+    height: 50px;
+    width: 100%;
+}
+
+.header-subtransition {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(17, 212, 10) 0%, rgb(133, 255, 133) 40%, #71e2e8 75%, #00a2e8 100%);
+}
+
+#header-subtransition1 {
+    clip-path: ellipse(50% 100% at 0% -10%);
+    animation-name: substransition1-keyframes;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+#header-subtransition2 {
+    clip-path: ellipse(50% 100% at 100% -10%);
+    animation-name: substransition2-keyframes;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+#header-subtransition3 {
+    clip-path: ellipse(18.88% 112.8% at 50% -30%);
+    animation-name: substransition3-keyframes;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes substransition1-keyframes {
+    0%, 100% {
+        clip-path: ellipse(50% 90% at 0% -10%);
+    }
+    45%, 55% {
+        clip-path: ellipse(55% 110% at 0% -10%);
+    }
+
+}
+
+@keyframes substransition2-keyframes {
+    0%, 100% {
+        clip-path: ellipse(50% 90% at 100% -10%);
+    }
+    45%, 55% {
+        clip-path: ellipse(55% 110% at 100% -10%);
+    }
+
+}
+
+@keyframes substransition3-keyframes {
+    0%, 100% {
+        clip-path: ellipse(18.88% 101.52% at 50% -30%);
+    }
+    45%, 55% {
+        clip-path: ellipse(18.88% 124.08% at 50% -30%);
+    }
+
+}
+
+/* === BOARDS === */
+
+#boards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+#column-left, #column-right {
+    min-width: 440px;
+}
+#column-middle {
+    min-width: 200px;
+}
+
+/* */
+.area {
+    /* Positioning */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    /* Appearance */
+    padding: 23px;
+    background-color: #71e2e8;
+    border-radius: 15px;
+}
+
+/*board header */
+.area-header {
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+/*Removing double borders */
+.board {
+    border-collapse: collapse;
+}
+/*board border styling */
+.board th, .board td {
+    border: 1px solid black;
+    height: 35px;
+    width: 35px;
+
+    /* Default position in image */
+    /*background-image: url(/images/battleships.png);*/
+    background-size: 630px;
+    background-position-x: -595px;
+    background-position-y: 1000px;
+}
+
+/* === SCREEN TOO SMALL */
+#screen-too-small {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #00a2e8;
+}
+
+@media only screen and (min-width: 1366px) {
+    #screen-too-small {
+        display: none;
+    }
+}
