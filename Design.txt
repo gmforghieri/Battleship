@@ -1,0 +1,46 @@
+== STATE
+GameState
+- Boats of Client A
+- Shots of Client A
+- Boats of Client B
+- Shots of Client B
+- Who's turn
+- Game status (Setup, Playing, Finished)
+
+== PACKETS
+START_GAME C
+- name= Player name
+* Server puts client in a queue
+* If there are enough players in the queue, send assign game to the players
+
+ASSIGN_GAME S
+- opname= Opponent's name
+* Client updates UI for the game
+
+SHOT C
+- location_col = Column of shot, 0 indexed
+- location_row = Row of shot, 0 indexed
+* Server will reply with shotreply
+
+SHOT_REPLY S
+- location_col = Column of shot, 0 indexed
+- location_row = Row of shot, 0 indexed
+- reply= INVALID/MISS/HIT
+* Sent to the player who just shot
+
+SHOT_ENEMY S
+- location_col = Column of shot, 0 indexed
+- location_row = Row of shot, 0 indexed
+- reply= MISS/HIT
+* Sent to the opponent of the player who just shot
+
+ABORT S
+
+FINISH S
+- winner = YOU/OPPONENT
+
+READY C
+- boats = array of BoatLocations
+
+START S
+- turn = Who is first, either YOU or OPPONENT
