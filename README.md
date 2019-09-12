@@ -12,7 +12,7 @@ Just click on play and you will be immediately queued against an other player. I
 but you would still like to try out the game, just open another tab and launch the game,
 thus you will be queued against yourself.
 
-Make sure to enable loading on unsafe scripts in your browser in order to be launched into the setup phase.
+Make sure to enable loading on unsafe scripts in your browser in order to be launched into the setup phase.  
 ![Load Unsafe Scripts](screenshots/Unsafe Script.jpg)
 
 https://battleshiproyale.azurewebsites.net/
