@@ -13,25 +13,25 @@ but you would still like to try out the game, just open another tab and launch t
 thus you will be queued against yourself.
 
 Make sure to enable loading on unsafe scripts in your browser in order to be launched into the setup phase.  
-![Load Unsafe Scripts](screenshots/Unsafe Script.jpg)
+![Load Unsafe Scripts](screenshots/UnsafeScript.jpg)
 
 https://battleshiproyale.azurewebsites.net/
 
 ## App Tour
 #### Landing Page
-![Screenshot of Landing Screen](screenshots/Landing Page.png)
+![Screenshot of Landing Screen](screenshots/LandingPage.png)
 
 The instructions button simply opens a modal window and informs the user regarding the rules of the game.
 
 #### Loading Page   
-![Screenshot of Loading Screen](screenshots/Loading Page.png)
+![Screenshot of Loading Screen](screenshots/LoadingPage.png)
 
 
 ### Setup Phase
-![Screenshot of Setup Phase](screenshots/Setup Phase.png) 
+![Screenshot of Setup Phase](screenshots/SetupPhase.png) 
 
 During the setup phase the user is able to allocate the boats to their desired location or 
 press the click to ready button to have the boats randomly placed on the board.
 
 ### Game Phase
-![Screenshot of Setup Phase](screenshots/Game Screen.png)
+![Screenshot of Setup Phase](screenshots/GameScreen.png)
