@@ -3,7 +3,7 @@ A web-browser game inspired by the famous Battleship board game.
 Implemented from scratch, this is my first coding project.
 
 ## Tools used for the project 
-Technologies: HTML, CSS, JavaScript, Node.js, Express.js 
+Technologies: HTML, CSS, JavaScript, Node.js, Express.js, Git, Github
 
 ## Running the application
 Game has been deployed to Microsoft Azure visible and playable for everyone.
