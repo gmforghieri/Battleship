@@ -13,6 +13,7 @@ but you would still like to try out the game, just open another tab and launch t
 thus you will be queued against yourself.
 
 Make sure to enable loading on unsafe scripts in your browser in order to be launched into the setup phase.  
+
 ![Load Unsafe Scripts](screenshots/UnsafeScript.jpg)
 
 https://battleshiproyale.azurewebsites.net/
