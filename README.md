@@ -1,6 +1,6 @@
 # About the project
 A web-browser game inspired by the famous Battleship board game. 
-Implemented from scratch, this is my first coding project.
+Implemented from scratch.
 
 ## Tools used for the project 
 Technologies: HTML, CSS, JavaScript, Node.js, Express.js, Git, Github
